@@ -34,7 +34,7 @@ function outputALL() {
 		while ($row = pg_fetch_row($result)) {
 			$Name[$count] =  $row[1];
 			$Price[$count] = $row[3];
-			$Img[$count] = $row[4];
+			$Img[$count] = $row[6];
 			$count+=1;
 			if($count==4){
 				$count = 0;
