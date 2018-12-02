@@ -56,6 +56,31 @@
     </div>
   </div>
 </div>
+<?php
+$cookie_fname = "user";
+$delimiter = ",";
+if(!isset($_COOKIE[$cookie_fname])) {
+    echo "Cookie named '" . $cookie_fname . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_fname . "' is set!<br>";
+    echo "as is: " . $_COOKIE[$cookie_fname];
+    echo "value is:" . $_COOKIE[$cookie_fname];}
+
+    $value = $_COOKIE[$cookie_fname];
+    $cookie_array = explode ("," , $value, 1300 );
+    $arrlength = count($cookie_array);
+    for($x = 0; $x < $arrlength; $x++){
+      echo $cookie_array[$x];
+      echo "<br>";
+    }
+    $newProduct = "TOSAT=";
+    $newValue = $value .','. $newProduct;
+    setcookie($cookie_fname, $newValue, time() + (200));
+    echo "<br> <br>";
+    echo "Cookie '" . $cookie_fname . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_fname];
+    echo "successssssssssssssss";
+    ?>
 
 </body>
 </html>
