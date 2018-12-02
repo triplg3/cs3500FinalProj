@@ -28,10 +28,12 @@ function outputALL() {
 
 		// output data of each row
 		$count=0;
+		$Id = array("","","","");
 		$Name = array("","","","");
 		$Price = array("","","","");
 		$Img = array("","","","");
 		while ($row = pg_fetch_row($result)) {
+			$Id[$count] = $row[0];
 			$Name[$count] =  $row[1];
 			$Price[$count] = $row[3];
 			$Img[$count] = $row[6];
@@ -44,7 +46,8 @@ function outputALL() {
     <div class="col-sm-3">
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[0]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[0]}		
+        <div class="panel-footer">{$Name[0]}	
+			<hr>Price:&curren {$Price[0]}  <a href="Product.php?varname={$Id[0]}">Visit Store Page</a>		
 		</div>
       </div>
     </div>
@@ -52,7 +55,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[1]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[1]}
-		
+			<hr>Price:&curren {$Price[1]}  <a href="Product.php?varname={$Id[1]}">Visit Store Page</a>	
 		
 		
 		</div>
@@ -62,6 +65,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[2]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[2]}
+		<hr>Price:&curren {$Price[2]}  <a href="Product.php?varname={$Id[2]}">Visit Store Page</a>	
 		</div>
       </div>
     </div>
@@ -69,6 +73,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[3]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[3]}
+		<hr>Price:&curren {$Price[3]}  <a href="Product.php?varname={$Id[3]}">Visit Store Page</a>	
 		</div>
       </div>
     </div>
