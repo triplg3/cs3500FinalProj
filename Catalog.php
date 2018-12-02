@@ -20,12 +20,12 @@ function outputALL() {
 	// Create connection
 	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
 	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
+	if (!$conn-) {
+		echo("Connection failed: We Ded" );
 	} 
 
-	$sql = "SELECT id, name, price, imgpath FROM catalog";
-	$result = $conn->query($sql);
+	$sql = "SELECT * FROM catalog";
+	$result = pg_query($conn, "SELECT * FROM catalog");
 
 	if ($result->num_rows > 0) {
 		// output data of each row
