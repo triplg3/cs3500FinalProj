@@ -44,7 +44,8 @@ function outputProduct() {
                     <h3>{$row[1]}</h3>   
 
                     <h6><small>Our Price</small></h6>
-                    <h3 style="margin-top:0px;"> &curren {$row[3]}</h3>                      
+                    <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
+						{$row[4]}
 ORDER;
 echo $order;
 		}
