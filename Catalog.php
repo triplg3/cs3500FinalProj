@@ -27,14 +27,14 @@ function outputALL() {
 	$sql = "SELECT * FROM catalog";
 	$result = pg_query($conn, "SELECT * FROM catalog");
 
-	if ($result->num_rows > 0) {
+
 		// output data of each row
 		$count=0;
 		$Name = array("","","","");
 		$Price = array("","","","");
 		$Img = array("","","","");
-		while($row = $result->fetch_assoc()) {
-
+		while ($row = pg_fetch_row($result)) {
+			echo $row[1]
 			$Name[$count] =  $row["name"];
 			$Price[$count] = $row["price"];
 			$Img[$count] = $row["imgpath"];
@@ -81,10 +81,6 @@ ORDER;
 echo $order;
     }
 } 
-	}
-else {
-    echo "0 results";
-}
 
 $conn->close();
 }
