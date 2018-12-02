@@ -9,34 +9,36 @@
 </head>
 <body>
 <?php
-/*
+
 function outputGPU() {
-	$servername = "localhost";
-	$username = "user";
-	$password = "password";
-	$dbname = "computer catalog";
+	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
+	$username = "cmbwirfswuomta";
+	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
+	$dbname = "d6gonsmn2ss9v6";
 
 	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
 	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
+	if (!$conn) {
+		echo("Connection failed: We Ded" );
+		
 	} 
 
-	$sql = "SELECT * FROM catalog where type = 'motherboard'";
-	$result = $conn->query($sql);
+	$sql = "SELECT * FROM catalog where type = 'Graphics card'";
+	$result = pg_query($conn, "SELECT * FROM catalog where type = 'Graphics card'");
 
-	if ($result->num_rows > 0) {
+
 		// output data of each row
 		$count=0;
+		$Id = array("","","","");
 		$Name = array("","","","");
 		$Price = array("","","","");
 		$Img = array("","","","");
-		while($row = $result->fetch_assoc()) {
-
-			$Name[$count] =  $row["name"];
-			$Price[$count] = $row["price"];
-			$Img[$count] = $row["imgpath"];
+		while ($row = pg_fetch_row($result)) {
+			$Id[$count] = $row[0];
+			$Name[$count] =  $row[1];
+			$Price[$count] = $row[3];
+			$Img[$count] = $row[6];
 			$count+=1;
 			if($count==4){
 				$count = 0;
@@ -46,7 +48,8 @@ function outputGPU() {
     <div class="col-sm-3">
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[0]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[0]}		
+        <div class="panel-footer">{$Name[0]}	
+			<hr>Price:&curren {$Price[0]}  <a href="Product.php?varname={$Id[0]}">Visit Store Page</a>		
 		</div>
       </div>
     </div>
@@ -54,7 +57,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[1]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[1]}
-		
+			<hr>Price:&curren {$Price[1]}  <a href="Product.php?varname={$Id[1]}">Visit Store Page</a>	
 		
 		
 		</div>
@@ -64,6 +67,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[2]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[2]}
+		<hr>Price:&curren {$Price[2]}  <a href="Product.php?varname={$Id[2]}">Visit Store Page</a>	
 		</div>
       </div>
     </div>
@@ -71,6 +75,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Img[3]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Name[3]}
+		<hr>Price:&curren {$Price[3]}  <a href="Product.php?varname={$Id[3]}">Visit Store Page</a>	
 		</div>
       </div>
     </div>
@@ -80,14 +85,9 @@ ORDER;
 echo $order;
     }
 } 
-	}
-else {
-    echo "0 results";
-}
 
 $conn->close();
 }
-*/
 function outputMB() {
 	include 'data.inc.php';
 		// output data of each row
