@@ -25,7 +25,7 @@ function outputMB() {
 	} 
 
 	$sql = "SELECT * FROM catalog where type = 'Graphics card'";
-	$result = pg_query($conn, "SELECT * FROM catalog where type = 'Graphics card'");
+	$result = pg_query($conn, "SELECT * FROM catalog where type = 'motherboard'");
 
 
 		// output data of each row

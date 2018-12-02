@@ -10,26 +10,48 @@
 <body>
 <?php
 $var_value = 0;
-	include 'data.inc.php';	
 function outputProduct() {
 	$var_value = $_GET['varname'];
-	include 'data.inc.php';
+	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
+	$username = "cmbwirfswuomta";
+	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
+	$dbname = "d6gonsmn2ss9v6";
+
+	// Create connection
+	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
+	// Check connection
+	if (!$conn) {
+		echo("Connection failed: We Ded" );
+		
+	} 
+
+	$result = pg_query($conn, "SELECT * FROM catalog where id = $var_value");
+
+
+		// output data of each row
+		while ($row = pg_fetch_row($result)) {
+
+
+
 	$order = <<<ORDER
 </div>
        <div class="container">
         	<div class="row">
                <div class="col-s-4 item-photo">
-                    <img style="max-width:100%;" src="{$Imgs[$var_value]}" />
+                    <img style="max-width:100%;" src="{$row[6]}" />
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">                   
-                    <h3>Samsung Galaxy S4 I337 16GB 4G LTE Unlocked GSM Android Cell Phone</h3>   
+                    <h3>{$row[1]}</h3>   
 
                     <h6><small>Our Price</small></h6>
-                    <h3 style="margin-top:0px;"> &curren {$Prices[$var_value]}</h3>                      
+                    <h3 style="margin-top:0px;"> &curren {$row[3]}</h3>                      
 ORDER;
 echo $order;
+		}
+$conn->close();
 }
-	
+
+}
 	
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
