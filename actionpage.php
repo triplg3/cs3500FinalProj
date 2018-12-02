@@ -22,9 +22,6 @@
 	$loggedin = "true";
 	$cookie_value = $loggedin . ',' . $username . ',' . $password;
 	setcookie($cookie_name, $cookie_value, time() + (200));
-	if(!isset($_COOKIE[$cookie_name])) {
-    echo "An error has occured, please try again";
-}
     // echo "Value is: " . $_COOKIE[$cookie_email];
     // echo "                         ";
     // echo "Value is: " . $_COOKIE[$cookie_password];
@@ -33,6 +30,6 @@
 	?>
 
 <!-- <a href="https://thisisatestonhowtohostahost.herokuapp.com/index.php" class="btn btn-success btn-block btn-lg">Home</a> -->
-<a href="http://localhost/cs3500FinalProj/index.php" class="btn btn-success btn-block btn-lg">Home</a>
+<a href="https://thisisatestonhowtohostahost.herokuapp.com/index.php" class="btn btn-success btn-block btn-lg">Home</a>
 </body>
 </html>
