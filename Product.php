@@ -45,7 +45,7 @@ function outputProduct() {
 
                     <h6><small>Our Price</small></h6>
                     <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
-						{$row[4]} <br> <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div>
+						{$row[4]} <br> 
 ORDER;
 echo $order;
 		}
@@ -55,6 +55,8 @@ $conn->close();
 
 	
 ?>
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -81,5 +83,7 @@ $conn->close();
 		outputProduct();
 	?>
 	 
+
+   <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div>
 </body>
 </html>
