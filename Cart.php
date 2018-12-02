@@ -43,7 +43,7 @@
   $value = $_COOKIE[$cookie_name];
     $cookie_array = explode ("," , $value, 1300 );
     $arrlength = count($cookie_array);
-    if($arrlength > 3){
+    if($arrlength > 2){
       if($cookie_array[0] == true){
         //NEEDS CODE TO SHOW WHAT IS IN CART
         $servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
@@ -54,6 +54,7 @@
         // Create connection
         $conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
           // Check connection
+        echo "DID I GET HERE";
         if (!$conn) {
           echo("Connection failed: We Ded" );
     
