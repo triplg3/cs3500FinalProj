@@ -69,11 +69,24 @@
   $description = $row[4];
 
   echo $id;
-  echo "<br>";
+  echo " TEST <br>";
+  echo "<div class='row'>   
+    <div class='col-sm-3'>
+      <div class='panel panel-primary'>
+        <div class='panel-body'><img src='{$Img}' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>{$name}  
+      <hr>Price:&curren {$price}  <a href='Product.php?varname={$Id}'>Visit Store Page</a>    
+    </div>
+      </div>
+    </div>";
 }
 
 
       }
+$conn->close();
+}
+else {
+  echo "Cart is empty!";
 
 }
 
