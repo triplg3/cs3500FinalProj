@@ -24,9 +24,9 @@ function outputProduct() {
 		echo("Connection failed: We Ded" );
 		
 	} 
-
+	echo($conn, "SELECT * FROM catalog where id ='".$var_value."'");
 	$result = pg_query($conn, "SELECT * FROM catalog where id ='".$var_value."'");
-
+	
 
 		// output data of each row
 		while ($row = pg_fetch_row($result)) {
