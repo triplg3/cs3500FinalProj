@@ -43,7 +43,7 @@
   $value = $_COOKIE[$cookie_name];
     $cookie_array = explode ("," , $value, 1300 );
     $arrlength = count($cookie_array);
-    if($arrlength > 3){
+    if($arrlength > 5){
       if($cookie_array[0] == true){
         //NEEDS CODE TO SHOW WHAT IS IN CART
         $servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
@@ -58,8 +58,8 @@
           echo("Connection failed: We Ded" );
     
   } 
-  for($i = 2; $i < $arrlength - 3; $i++){
-  $sql = "SELECT * FROM catalog WHERE ID == " . $cookie_array[$i];
+  for($i = 5; $i < $arrlength; $i++){
+  $sql = "SELECT * FROM catalog WHERE id == " . $cookie_array[$i];
   $result = pg_query($conn, $sql);
   $row = pg_fetch_row($result);
   $id = $row[0];
@@ -73,9 +73,9 @@
   echo "<div class='row'>   
     <div class='col-sm-12'>
       <div class='panel panel-primary'>
-        <div class='panel-body'><img src='{$Img}' class='img-responsive' style='width:100%' alt='Image'></div>
-        <div class='panel-footer'>{$name}  
-      <hr>Price:&curren {$price}  <a href='Product.php?varname={$Id}'>Visit Store Page</a>    
+        <div class='panel-body'><img src='{". $Img. "}' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>{" . $name . "}  
+      <hr>Price:&curren {" . $price . "}  <a href='Product.php?varname={". $Id. "}'>Visit Store Page</a>    
     </div>
       </div>
     </div>";
