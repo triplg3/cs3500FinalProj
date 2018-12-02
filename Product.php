@@ -45,7 +45,7 @@ function outputProduct() {
 
                     <h6><small>Our Price</small></h6>
                     <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
-						{$row[4]}  <div class="col-sm-6"><input type="submit" value="Add to Cart" <span class="glyphicon glyphicon-shopping-cart"></span> class="btn btn-warning btn-block btn-lg"></div>
+						{$row[4]}  <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg"></div>
 ORDER;
 echo $order;
 		}
