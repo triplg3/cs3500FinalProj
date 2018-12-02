@@ -25,18 +25,19 @@
         </ul>
       </li>
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
-      <li><a href="Cart.html">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      <li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
       </div>
     </nav>
   <br><br>
-
+<br><br>
+<br><br>
   <?php 
   $cookie_name = "CS3500_final_user";
   $delimiter = ",";
   if(!isset($_COOKIE[$cookie_name])) {
     echo "You have not been registered yet! Please register using the link below to sign in!";
-    <a href="http://localhost/cs3500FinalProj/SignUp.html" class="btn btn-success btn-block btn-lg">Sign up!</a>
+    echo ("<a href='http://localhost/cs3500FinalProj/SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
 }
   else {
   $value = $_COOKIE[$cookie_name];
@@ -44,7 +45,9 @@
     $arrlength = count($cookie_array);
     if($arrlength > 3){
       if($cookie_array[0] == true){
-        <!-- NEEDS CODE TO SHOW WHAT IS IN CART -->
+        //NEEDS CODE TO SHOW WHAT IS IN CART
+
+
 
       }
 

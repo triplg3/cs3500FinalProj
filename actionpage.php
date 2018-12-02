@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="3pages.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <head>
-	<title>You shouldn't see this</title>
+	<title>Welcome!</title>
 </head>
 <body>
 
-	Welcome! 
+	Welcome! You are now registered!
+	<br>
+	Please click the home button below to browse the store!
 	<br>
 	<?php 
 
-	$cookie_name = "user";
-	$cookie_value = "One,TWO,0afsfa,341444,v dssdv,0hello,how are you,dsds7,0asfffa,0243tg3g43g378hteynocryfhwq384o7ncmhoi7w3erlmxh78o3q4btg8v67bngo8w637g4nmcw38o4o7gmcq0p8c374gfv3mnyw4uh,1je4rt6yhj46jh";
+	$cookie_name = "CS3500_final_user";
+	$username = $_GET["email"];
+	$password = $_GET["password"];
+	$loggedin = "true";
+	$cookie_value = $loggedin . ',' . $username . ',' . $password;
 	setcookie($cookie_name, $cookie_value, time() + (200));
 	if(!isset($_COOKIE[$cookie_name])) {
     echo "Cookie named '" . $cookie_name . "' is not set!";
@@ -24,6 +34,7 @@
 
 	?>
 
-
+<!-- <a href="https://thisisatestonhowtohostahost.herokuapp.com/index.php" class="btn btn-success btn-block btn-lg">Home</a> -->
+<a href="http://localhost/cs3500FinalProj/index.php" class="btn btn-success btn-block btn-lg">Home</a>
 </body>
 </html>
