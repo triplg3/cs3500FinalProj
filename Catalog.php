@@ -9,13 +9,13 @@
 </head>
 <body>
 <?php
-	/*
+	
 function outputALL() {
-	/*
-	$servername = "localhost";
-	$username = "user";
-	$password = "password";
-	$dbname = "computer catalog";
+	
+	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
+	$username = "cmbwirfswuomta";
+	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
+	$dbname = "d6gonsmn2ss9v6";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -88,7 +88,7 @@ else {
 
 $conn->close();
 }
-*/
+/*
 function outputALL() {
 	include 'data.inc.php';
 		// output data of each row
@@ -142,7 +142,7 @@ echo $order;
 $count+=4;
     }
 }
-
+*/
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
