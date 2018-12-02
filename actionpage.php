@@ -9,25 +9,28 @@
 	<title>Welcome!</title>
 </head>
 <body>
-
-	Welcome! You are now registered!
-	<br>
-	Please click the home button below to browse the store!
-	<br>
 	<?php 
 
 	$cookie_name = "CS3500_final_user";
 	$username = $_GET["email"];
 	$password = $_GET["password"];
+	$firstname = $_GET["first_name"];
+	$lastname = $_GET["last_name"];
 	$loggedin = "true";
-	$cookie_value = $loggedin . ',' . $username . ',' . $password;
+	$cookie_value = $loggedin . ',' . $username . ',' . $password . ','  . $firstname . ',' . $lastname;
 	setcookie($cookie_name, $cookie_value, time() + (200));
     // echo "Value is: " . $_COOKIE[$cookie_email];
     // echo "                         ";
     // echo "Value is: " . $_COOKIE[$cookie_password];
-
+	echo "Welcome, " . $firstname . "! You are now registered!
+	<br>
+	Please click the home button below to browse the store!
+	<br>
+	"
 
 	?>
+
+
 
 <!-- <a href="https://thisisatestonhowtohostahost.herokuapp.com/index.php" class="btn btn-success btn-block btn-lg">Home</a> -->
 <a href="https://thisisatestonhowtohostahost.herokuapp.com/index.php" class="btn btn-success btn-block btn-lg">Home</a>

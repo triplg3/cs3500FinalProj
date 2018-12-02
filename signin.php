@@ -40,7 +40,11 @@ if(!isset($_COOKIE[$cookie_name])) {
 }
     }
   }
-
+  echo "Welcome, " . $firstname . "! You are now registered!
+	<br>
+	Please click the home button below to browse the store!
+	<br>
+	"
  
 
 ?>

@@ -37,13 +37,13 @@
   $delimiter = ",";
   if(!isset($_COOKIE[$cookie_name])) {
     echo "You have not been registered yet! Please register using the link below to sign in!";
-    echo ("<a href='SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
+    echo ("<a href='http://localhost/cs3500FinalProj/SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
 }
   else {
   $value = $_COOKIE[$cookie_name];
     $cookie_array = explode ("," , $value, 1300 );
     $arrlength = count($cookie_array);
-    if($arrlength > 2){
+    if($arrlength > 3){
       if($cookie_array[0] == true){
         //NEEDS CODE TO SHOW WHAT IS IN CART
         $servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
@@ -54,7 +54,6 @@
         // Create connection
         $conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
           // Check connection
-        echo "DID I GET HERE";
         if (!$conn) {
           echo("Connection failed: We Ded" );
     
@@ -72,7 +71,7 @@
   echo $id;
   echo " TEST <br>";
   echo "<div class='row'>   
-    <div class='col-sm-3'>
+    <div class='col-sm-12'>
       <div class='panel panel-primary'>
         <div class='panel-body'><img src='{$Img}' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>{$name}  
