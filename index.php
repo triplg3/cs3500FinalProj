@@ -1,179 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Catalog</title>
+  <title>Home</title>
   <link rel="stylesheet" href="3pages.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php
-function outputALL() {
-	$servername = "localhost";
-	$username = "user";
-	$password = "password";
-	$dbname = "computer catalog";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-
-	$sql = "SELECT id, name, price, imgpath FROM catalog";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-		// output data of each row
-		$count=0;
-		$Name = array("","","","");
-		$Price = array("","","","");
-		$Img = array("","","","");
-		while($row = $result->fetch_assoc()) {
-
-			$Name[$count] =  $row["name"];
-			$Price[$count] = $row["price"];
-			$Img[$count] = $row["imgpath"];
-			$count+=1;
-			if($count==4){
-				$count = 0;
-			
-        	$order = <<<ORDER
-<div class="row">		
-    <div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[0]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[0]}		
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[1]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[1]}
-		
-		
-		
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[2]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[2]}
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[3]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[3]}
-		</div>
-      </div>
-    </div>
-</div>
-
-ORDER;
-echo $order;
-    }
-} 
-	}
-else {
-    echo "0 results";
-}
-
-$conn->close();
-}
-function outputCPU() {
-	$servername = "localhost";
-	$username = "user";
-	$password = "password";
-	$dbname = "computer catalog";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-
-	$sql = "SELECT * FROM catalog where type = 'CPU'";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-		// output data of each row
-		$count=0;
-		$Name = array("","","","");
-		$Price = array("","","","");
-		$Img = array("","","","");
-		while($row = $result->fetch_assoc()) {
-
-			$Name[$count] =  $row["name"];
-			$Price[$count] = $row["price"];
-			$Img[$count] = $row["imgpath"];
-			$count+=1;
-			if($count==4){
-				$count = 0;
-			
-        	$order = <<<ORDER
-<div class="row">		
-    <div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[0]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[0]}		
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[1]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[1]}
-		
-		
-		
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[2]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[2]}
-		</div>
-      </div>
-    </div>
-	<div class="col-sm-3">
-      <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[3]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[3]}
-		</div>
-      </div>
-    </div>
-</div>
-
-ORDER;
-echo $order;
-    }
-} 
-	}
-else {
-    echo "0 results";
-}
-
-$conn->close();
-}
-?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="https://i.imgur.com/ZYho29R.png">Parts Store</a>
         </div>
           <ul class="nav navbar-nav">
-            <li><a href="Home.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active"><a href="index.php">Home <span class="glyphicon glyphicon-home"></span></a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Catalog.php">Catalog  <span class="glyphicon glyphicon-book"></span><span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li class="active"><a href="Catalog.php">All</a></li>
+					<li><a href="Catalog.php">All</a></li>
 					<li><a href="CatalogGC.php">Graphics Cards</a></li>
 					<li><a href="CatalogCPU.php">CPU</a></li>
 					<li><a href="CatalogCooler.php">Coolers</a></li>
@@ -185,14 +29,33 @@ $conn->close();
           </ul>
       </div>
     </nav>
-	<br><br><br><br>
-	 		<div class="container">  
-                  <?php
-				 
-					 outputALL();
+	<br><br>
+<div class="container">
+  <div id="picSlide" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#picSlide" data-slide-to="0" class="active"></li>
+      <li data-target="#picSlide" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="Item One">
+		<img src="https://i.imgur.com/ZYho29R.png" style="width:100%;">
+        <div class="carousel-caption">
+          <h2>Intel Core i9</h2>
+        </div>
+		</a>
+      </div>    
+	  <div class="item">
+	  <a href="Item Two">
+        <img src="https://i.imgur.com/dZZyi7l.png" style="width:100%;">
+        <div class="carousel-caption">
+         <h2>MSI Z390</h2>
+        </div>
+		</a>
+      </div> 
+    </div>
+  </div>
+</div>
 
-					 
-					 ?>  
-					</div><br>		 
 </body>
 </html>

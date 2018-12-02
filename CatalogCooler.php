@@ -93,7 +93,7 @@ $conn->close();
           <a class="navbar-brand" href="https://i.imgur.com/ZYho29R.png">Parts Store</a>
         </div>
           <ul class="nav navbar-nav">
-            <li><a href="Home.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="index.php">Home <span class="glyphicon glyphicon-home"></span></a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Catalog.php">Catalog  <span class="glyphicon glyphicon-book"></span><span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="Catalog.php">All</a></li>
