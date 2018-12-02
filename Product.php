@@ -51,7 +51,7 @@ echo $order;
 $conn->close();
 }
 
-}
+
 	
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
