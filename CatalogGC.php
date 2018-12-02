@@ -93,14 +93,16 @@ function outputGPU() {
 		// output data of each row
 		$count=0;
 		while($count<4) {
-			
+			$count1=$count+1;
+			$count2=$count+2;
+			$count3=$count+3;			
         	$order = <<<ORDER
 <div class="row">		
     <div class="col-sm-3">
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count]}	
-		<hr>Price: {$Prices[$count]} 		
+		<hr>Price:&curren {$Prices[$count]} 	<a href="Product.php?varname={$count}">Visit Store Page</a>	
 		</div>
       </div>
     </div>
@@ -108,7 +110,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+1]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+1]}
-		<hr>Price: {$Prices[$count+1]} 
+		<hr>Price:&curren {$Prices[$count+1]} <a href="Product.php?varname={$count1}">Visit Store Page</a>
 		
 		
 		
@@ -119,7 +121,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+2]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+2]}
-		<hr>Price: {$Prices[$count+2]} 
+		<hr>Price:&curren {$Prices[$count+2]} <a href="Product.php?varname={$count2}">Visit Store Page</a>
 		</div>
       </div>
     </div>
@@ -127,7 +129,7 @@ function outputGPU() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+3]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+3]}
-		<hr>Price: {$Prices[$count+3]} 
+		<hr>Price:&curren {$Prices[$count+3]} <a href="Product.php?varname={$count3}">Visit Store Page</a>
 		</div>
       </div>
     </div>
