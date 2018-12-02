@@ -32,9 +32,9 @@ function outputALL() {
 		$Price = array("","","","");
 		$Img = array("","","","");
 		while ($row = pg_fetch_row($result)) {
-			$Name[$count] =  $row["name"];
-			$Price[$count] = $row["price"];
-			$Img[$count] = $row["imgpath"];
+			$Name[$count] =  $row[1];
+			$Price[$count] = $row[3];
+			$Img[$count] = $row[4];
 			$count+=1;
 			if($count==4){
 				$count = 0;
