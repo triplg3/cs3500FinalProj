@@ -9,6 +9,7 @@
 </head>
 <body>
 <?php
+/*
 function outputGPU() {
 	$servername = "localhost";
 	$username = "user";
@@ -86,6 +87,56 @@ else {
 
 $conn->close();
 }
+*/
+function outputMB() {
+	include 'data.inc.php';
+		// output data of each row
+		$count=12;
+		while($count<16) {
+			
+        	$order = <<<ORDER
+<div class="row">		
+    <div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="{$Imgs[$count]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count]}
+			<hr>Price: {$Prices[$count]} 
+		</div>
+      </div>
+    </div>
+	<div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="{$Imgs[$count+1]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+1]}
+		<hr>Price: {$Prices[$count+1]} 
+		
+		
+		</div>
+      </div>
+    </div>
+	<div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="{$Imgs[$count+2]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+2]}
+		<hr>Price: {$Prices[$count+2]} 
+		</div>
+      </div>
+    </div>
+	<div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="{$Imgs[$count+3]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+3]}
+		<hr>Price: {$Prices[$count+3]} 
+		</div>
+      </div>
+    </div>
+</div>
+
+ORDER;
+echo $order;
+$count+=4;
+    }
+}
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -112,7 +163,7 @@ $conn->close();
 	 		<div class="container">  
                   <?php
 				 
-					 outputGPU();
+					 outputMB();
 
 					 
 					 ?>  

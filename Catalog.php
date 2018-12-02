@@ -102,6 +102,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count]}		
+				<hr>Price: {$Prices[$count]} 
 		</div>
       </div>
     </div>
@@ -109,6 +110,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+1]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+1]}
+				<hr>Price: {$Prices[$count+1]} 
 		
 		
 		
@@ -119,6 +121,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+2]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+2]}
+				<hr>Price: {$Prices[$count+2]} 
 		</div>
       </div>
     </div>
@@ -126,6 +129,7 @@ function outputALL() {
       <div class="panel panel-primary">
         <div class="panel-body"><img src="{$Imgs[$count+3]}" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">{$Names[$count+3]}
+				<hr>Price: {$Prices[$count+3]} 
 		</div>
       </div>
     </div>
