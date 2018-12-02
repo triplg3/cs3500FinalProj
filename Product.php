@@ -25,7 +25,7 @@ function outputProduct() {
 		
 	} 
 
-	$result = pg_query($conn, "SELECT * FROM catalog where id = 6");
+	$result = pg_query($conn, "SELECT * FROM catalog");
 
 
 		// output data of each row
