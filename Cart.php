@@ -46,7 +46,31 @@
     if($arrlength > 3){
       if($cookie_array[0] == true){
         //NEEDS CODE TO SHOW WHAT IS IN CART
+        $servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
+        $username = "cmbwirfswuomta";
+        $password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
+        $dbname = "d6gonsmn2ss9v6";
 
+        // Create connection
+        $conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
+          // Check connection
+        if (!$conn) {
+          echo("Connection failed: We Ded" );
+    
+  } 
+  for($i = 2; $i < $arrlength - 3; $i++){
+  $sql = "SELECT * FROM catalog WHERE ID == " . $cookie_array[$i];
+  $result = pg_query($conn, $sql);
+  $row = pg_fetch_row($result);
+  $id = $row[0];
+  $name = $row[1];
+  $price = $row[3];
+  $img = $row[6];
+  $description = $row[4];
+
+  echo $id;
+  echo "<br>";
+}
 
 
       }

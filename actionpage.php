@@ -23,14 +23,12 @@
 	$cookie_value = $loggedin . ',' . $username . ',' . $password;
 	setcookie($cookie_name, $cookie_value, time() + (200));
 	if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
-} else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "An error has occured, please try again";
+}
     // echo "Value is: " . $_COOKIE[$cookie_email];
     // echo "                         ";
     // echo "Value is: " . $_COOKIE[$cookie_password];
-}
+
 
 	?>
 
