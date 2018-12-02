@@ -9,7 +9,9 @@
 </head>
 <body>
 <?php
+	/*
 function outputALL() {
+	/*
 	$servername = "localhost";
 	$username = "user";
 	$password = "password";
@@ -86,50 +88,27 @@ else {
 
 $conn->close();
 }
-function outputCPU() {
-	$servername = "localhost";
-	$username = "user";
-	$password = "password";
-	$dbname = "computer catalog";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-
-	$sql = "SELECT * FROM catalog where type = 'CPU'";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
+*/
+function outputALL() {
+	include 'data.inc.php';
 		// output data of each row
 		$count=0;
-		$Name = array("","","","");
-		$Price = array("","","","");
-		$Img = array("","","","");
-		while($row = $result->fetch_assoc()) {
-
-			$Name[$count] =  $row["name"];
-			$Price[$count] = $row["price"];
-			$Img[$count] = $row["imgpath"];
-			$count+=1;
-			if($count==4){
-				$count = 0;
+		while($count<16) {
+			
 			
         	$order = <<<ORDER
 <div class="row">		
     <div class="col-sm-3">
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[0]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[0]}		
+        <div class="panel-body"><img src="{$Imgs[$count]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count]}		
 		</div>
       </div>
     </div>
 	<div class="col-sm-3">
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[1]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[1]}
+        <div class="panel-body"><img src="{$Imgs[$count+1]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+1]}
 		
 		
 		
@@ -138,15 +117,15 @@ function outputCPU() {
     </div>
 	<div class="col-sm-3">
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[2]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[2]}
+        <div class="panel-body"><img src="{$Imgs[$count+2]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+2]}
 		</div>
       </div>
     </div>
 	<div class="col-sm-3">
       <div class="panel panel-primary">
-        <div class="panel-body"><img src="{$Img[3]}" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">{$Name[3]}
+        <div class="panel-body"><img src="{$Imgs[$count+3]}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{$Names[$count+3]}
 		</div>
       </div>
     </div>
@@ -154,15 +133,10 @@ function outputCPU() {
 
 ORDER;
 echo $order;
+$count+=4;
     }
-} 
-	}
-else {
-    echo "0 results";
 }
 
-$conn->close();
-}
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
