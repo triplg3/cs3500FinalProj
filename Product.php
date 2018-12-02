@@ -24,30 +24,8 @@ function outputProduct() {
 		echo("Connection failed: We Ded" );
 		
 	} 
-
-	$result = pg_query($conn, "SELECT * FROM catalog where id =".(int)$var_value);
+	echo "SELECT * FROM catalog where id =".$var_value;
 	
-
-		// output data of each row
-		while ($row = pg_fetch_row($result)) {
-
-
-
-	$order = <<<ORDER
-</div>
-       <div class="container">
-        	<div class="row">
-               <div class="col-s-4 item-photo">
-                    <img style="max-width:100%;" src="{$row[6]}" />
-                </div>
-                <div class="col-xs-5" style="border:0px solid gray">                   
-                    <h3>{$row[1]}</h3>   
-
-                    <h6><small>Our Price</small></h6>
-                    <h3 style="margin-top:0px;"> &curren {$row[3]}</h3>                      
-ORDER;
-echo $order;
-		}
 $conn->close();
 }
 
