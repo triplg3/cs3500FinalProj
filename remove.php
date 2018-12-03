@@ -8,6 +8,11 @@
 
 	<?php 
 	$removeID = $_GET['varname'];
+    if($removeID < 10)
+    {
+        $removeID ="0" . $removeID;
+
+    }
 	$cookie_name = "CS3500_final_user";
   $delimiter = ",";
   $value = $_COOKIE[$cookie_name];
@@ -16,11 +21,7 @@
     $money = (int) $moneyString;
     $finalString = "true";
     $arrlength = count($cookie_array);
-    if($removeID < 10)
-    {
-        $removeID ="0" . $removeID;
 
-    }
     // for($i = 6; $i < $arrlength; $i++){
     // 	if($removeID == $cookie_array[$i]){
     // 		for($j = )
@@ -40,8 +41,7 @@
     }
     else{
         
-    $value = str_replace($removeID . ",", "", $value);
-    $finalString = $value;
+    $finalString = str_replace($removeID . ",", "", $value);
     setcookie($cookie_name, $finalString, time() + (200));
 }
 
