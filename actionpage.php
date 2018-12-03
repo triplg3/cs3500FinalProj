@@ -16,13 +16,16 @@
 	$password = $_GET["password"];
 	$firstname = $_GET["first_name"];
 	$lastname = $_GET["last_name"];
+	$money = "500";
 	$loggedin = "true";
-	$cookie_value = $loggedin . ',' . $username . ',' . $password . ','  . $firstname . ',' . $lastname;
+	$cookie_value = $loggedin . ',' . $username . ',' . $password . ','  . $firstname . ',' . $lastname . ',' . $money;
 	setcookie($cookie_name, $cookie_value, time() + (200));
     // echo "Value is: " . $_COOKIE[$cookie_email];
     // echo "                         ";
     // echo "Value is: " . $_COOKIE[$cookie_password];
 	echo "Welcome, " . $firstname . "! You are now registered!
+	<br>
+	You have " . $money .  " amount of coins
 	<br>
 	Please click the home button below to browse the store!
 	<br>

@@ -45,7 +45,8 @@
   $total = 0;
   $value = $_COOKIE[$cookie_name];
     $cookie_array = explode ("," , $value, 1300 );
-    $money = $cookie_array[5];
+    $moneyString = $cookie_array[5];
+    $money = (int) $moneyString;
     $arrlength = count($cookie_array);
     if($arrlength > 6){
       if($cookie_array[0] == true){
