@@ -44,17 +44,13 @@ function outputProduct() {
 	$username = "cmbwirfswuomta";
 	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
 	$dbname = "d6gonsmn2ss9v6";
-<<<<<<< HEAD
+
 	// Used to hide checkout button if stock = 0
 	$checkout='<a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>';
 	if ($stockcount==0){
 		$checkout='';		
 	}
 	// Sql Calls
-=======
-
->>>>>>> parent of c3bd217... Update Product.php
-	// Create connection
 	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
 	// Check connection
 	if (!$conn) {
@@ -67,7 +63,7 @@ function outputProduct() {
 
 		// output data of each row
 		while ($row = pg_fetch_row($result)) {
-
+		$var_value = $_GET['varname'];
 
 // Format for each product to be drawn onto
 	$order = <<<ORDER
