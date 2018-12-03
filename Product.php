@@ -50,9 +50,10 @@ function outputProduct() {
 ORDER;
 echo $order;
 		}
-    echo "DID I GET HERE";
-$testarray = $_SESSION["stock"];
-$testcount= count($testarray);
+$stockarray = $_SESSION["stock"];
+$stockcount= count($stockarray);
+$stararray = $_SESSION["stars"];
+$starcount = count($stararray);
 for ($i=0; $i < $testcount; $i++) { 
   echo $testarray[$i];
 }

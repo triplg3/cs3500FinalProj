@@ -72,12 +72,6 @@ for ($i=0; $i < 100; $i++) {
 }
 $_SESSION["stars"] = $starsArray;
 $_SESSION["stock"] = $stockArray;
-for ($i=0; $i < 100; $i++) { 
- $testarray = $_SESSION["stars"];
- echo $testarray[$i];
-
-}
-
 
 ?>
 </body>
