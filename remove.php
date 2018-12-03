@@ -45,7 +45,7 @@
 
 
 
-
+header('Location: Cart.php');
 	?>
 
 </body>
