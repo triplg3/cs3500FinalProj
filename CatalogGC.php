@@ -108,27 +108,6 @@ $conn->close();
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
-      <div class="navbar-form navbar-right">
-            <?php 
-             $cookie_name = "CS3500_final_user";
-            if(isset($_COOKIE[$cookie_name])) {
-           
-            $delimiter = ",";
-            $value = $_COOKIE[$cookie_name];
-            $cookie_array = explode ("," , $value, 1300 );
-            $arrlength = count($cookie_array);
-            $money = $cookie_array[5];
-
-            
-          echo "<button class='btn btn-dark' disabled>&curren" . $money . "</button>";
-        }
-        else {
-          echo "Please sign in!";
-
-        }
-
-        ?>
-          </div>
       </div>
     </nav>
 	<br><br><br><br>
