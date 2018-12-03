@@ -68,11 +68,13 @@
   $total = $total + $price;
 }
 	if($money >= $total){
-	echo "YOU PAID US MONEH IN THE ORDER OF " . $total . "WEBCOINSSSSSSSSSSSS";
+	echo "<h2>You spent " . $total . "webcoins</h2>";
 	$newmoney = $money - $total;
-	echo "You have " . $newmoney . " webcoins remaining.";
+	echo "<h2>You have " . $newmoney . " webcoins remaining</h2>";
 }
-	else {echo "You broke, removing something";}
+	else {echo "<h2> You do not have enough money! Sorry!</h2>";
+		echo ("<a href='Cart.php' class='btn btn-success btn-block btn-lg'>Cart</a>");
+}
 }}
 ?>
 
