@@ -20,7 +20,7 @@
 	$money = "500";
 	$loggedin = "true";
 	$cookie_value = $loggedin . ',' . $username . ',' . $password . ','  . $firstname . ',' . $lastname . ',' . $money;
-	setcookie($cookie_name, $cookie_value, time() + (86400 * 30));
+	setcookie($cookie_name, $cookie_value, time() + (200));
     // echo "Value is: " . $_COOKIE[$cookie_email];
     // echo "                         ";
     // echo "Value is: " . $_COOKIE[$cookie_password];

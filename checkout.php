@@ -68,7 +68,7 @@
   $total = $total + $price;
 }
 	if($money >= $total){
-	echo "<h2>You spent " . $total . " webcoins</h2>";
+	echo "<h2>You spent " . $total . "webcoins</h2>";
 	$newmoney = $money - $total;
 	echo "<h2>You have " . $newmoney . " webcoins remaining</h2>";
 }
