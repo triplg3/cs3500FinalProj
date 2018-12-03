@@ -77,12 +77,8 @@ $order = <<<ORDER
 					<div class='panel-footer'>
 						<div class='container'>
 							{$name}  
-							<div class='col-sm-2>
-								<hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
-							</div>
-							<div class='col-sm-4>
-								<a href="remove.php?varname={$id}"> <div class="col-sm-2"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
-							</div>
+						<hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
+						<hr><a href="remove.php?varname={$id}"> <div class="col-sm-2"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
 						</div>
 					</div>
 				</div>
