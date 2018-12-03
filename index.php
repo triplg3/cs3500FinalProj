@@ -23,9 +23,14 @@
 					<li><a href="CatalogCooler.php">Coolers</a></li>
 					<li><a href="CatalogMB.php">MotherBoards</a></li>
 				</ul>
+				
 			</li>
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          </ul>
+		  <ul class="nav navbar-nav navbar-right">
+              <li>Egg</li>
+              <li>Name</a></li>
           </ul>
       </div>
     </nav>
