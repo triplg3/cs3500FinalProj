@@ -51,7 +51,7 @@ ORDER;
 echo $order;
 		}
     echo "DID I GET HERE";
-$testarray = $_SESSION["stockarray"];
+$testarray = $_SESSION["stock"];
 $testcount= count($testarray);
 for ($i=0; $i < testcount; $i++) { 
   echo $testcount[$i];
