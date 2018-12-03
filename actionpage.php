@@ -30,7 +30,7 @@
 	Please click the home button below to browse the store!
 	<br>
 	";
-	header('Location: Product.php?varname='.$var_value);
+	header('Location: index.php');
 	?>
 
 
