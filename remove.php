@@ -7,11 +7,10 @@
 
 
 	<?php 
-	$removeID = $_GET['varname'];
+	
     if($removeID < 10)
     {
-        $removeID ="0" . $removeID;
-
+        $removeID = "0" . $_GET['varname'];
     }
 	$cookie_name = "CS3500_final_user";
   $delimiter = ",";
