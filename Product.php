@@ -51,7 +51,7 @@ echo $order;
 		}
 $conn->close();
 }
-
+echo "DID I GET HERE";
 $testarray = $_SESSION["stockarray"];
 $testcount= count($testarray);
 for ($i=0; $i < testcount; $i++) { 
