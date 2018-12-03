@@ -2,7 +2,8 @@
 <?php session_start();?>
 <html>
 <head>
-  <title>Product</title>
+  <title>Catalog</title>
+  <link rel="stylesheet" href="3pages.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -10,9 +11,7 @@
 <body>
 <?php
 $var_value = 0;
-// Used to draw the item on the page based on the passed id
 function outputProduct() {
-	// Determines How many stars to draw based on session values
 	$startxt='<i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>';
 	$starval = 0;
 	
@@ -39,17 +38,15 @@ function outputProduct() {
 	if($starval==5){
 		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i>';
 	}
-	// Sql Calls
 	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
 	$username = "cmbwirfswuomta";
 	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
 	$dbname = "d6gonsmn2ss9v6";
-	// Used to hide checkout button if stock = 0
 	$checkout='<a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>';
 	if ($stockcount==0){
-		$checkout='';		
+		$checkout='';
+		
 	}
-	// Sql Calls
 	// Create connection
 	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
 	// Check connection
@@ -65,7 +62,7 @@ function outputProduct() {
 		while ($row = pg_fetch_row($result)) {
 
 
-// Format for each product to be drawn onto
+
 	$order = <<<ORDER
 </div>
        <div class="container">
