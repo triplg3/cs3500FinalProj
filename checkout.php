@@ -58,6 +58,7 @@
           echo("Connection failed: We Ded" );
     
   } 
+  //handles costs and and tells the user the results
   for($i = 6; $i < $arrlength; $i++){
   $sql = "SELECT * FROM catalog WHERE id =" . $cookie_array[$i];
   $result = pg_query($conn, $sql);

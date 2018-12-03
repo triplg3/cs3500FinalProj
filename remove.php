@@ -8,7 +8,7 @@
 
 
 	<?php 
-	
+	// sets up the arrays for editing
         $removeID = $_GET['varname'];
 	$cookie_name = "CS3500_final_user";
   $delimiter = ",";
@@ -25,6 +25,7 @@
     // 	}
 
     // }
+    //removes the item from the cart if the item is the last item in the list
     if($removeID == $cookie_array[$arrlength-1]){
     	for ($i=0; $i < $arrlength - 1; $i++) { 
     		$tempArray[$i] = $cookie_array[$i];
@@ -36,6 +37,7 @@
     	setcookie($cookie_name, $finalString, time() + (86400 * 30));
 
     }
+    //removes beginning and middle values you wish to delete from the cart
     else{
         
     $finalString = str_replace($removeID . ",", "", $value);

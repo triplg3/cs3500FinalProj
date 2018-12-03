@@ -11,7 +11,7 @@
 </head>
 <body>
 	<?php 
-
+	//initializes cookies for user upon registration
 	$cookie_name = "CS3500_final_user";
 	$username = $_GET["email"];
 	$password = $_GET["password"];

@@ -7,6 +7,7 @@
 <body>
 
 	<?php 
+	//php gets and updates the values of cookies appending to the end of the string
 	$var_value = $_GET['varname'];
 	$cookie_name = "CS3500_final_user";
 	$delimiter = ",";
