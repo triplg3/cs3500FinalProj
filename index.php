@@ -82,7 +82,7 @@
       </div> 
       <div class="item">
     <a href="CatalogGC.php">
-        <img src="images/51Avu5iodlL" style="width:100%;">
+        <img src="https://lh3.googleusercontent.com/hjONmQ5TMFg9EMkSjuyP4aHnEgHlm--f6jdekO1IiHhVgXWhb0Z6DetsazwanL3yadpDqrVZ13Sqk2BNLjhV8AuYERxvCyTR1x2oj6708AjVg2Bt-EnUZvW8K64iUiAd0e333nW7beq6a9v1Jld6vURSGiLzqX4WcstH0r0tZF6LA_iJVQbnaDjQj0zmDgSEhqJ0Iyc2bLKuj7EwzFAGUpJccZQ37l1AQNpCVGhx1kaCObbsjdnb34Wykr7lBhfd73hpG8cLvvOkuI4qc4JRiaopcFBcZv_czFfEYHHjv2Y5-c1xjJys7WvQ9aXUEAUYrZ_cgOesln_Lv-nz8gnio05R3DnZq-zBcsSGuErtpwanW5QDrcgSbOnz9m6seydxYvRxe7vfxwgBDflCm8qvzPvnp8bPG7olHiDSstGK_pf-2smiJ2qwdjIhB-gSUw7XVUfQT2K_ZrnPMlaxKclzx880cFapVjaNEPK1uDtt-zlOaA1pC9GVi0d8mFaWQpmLTuc5XkjDOVGCD8YTpusQenQCmR3nZ-d3WH1Hnz0NOf4LkFcIjavAboHFUlGsDd2t1QkEJl85QIAM-hiIhuOZ6iPw7c07rJuY58S1jN4KqRNx_dNKCHMNiqllV-VhY0kr347RmbjfewqF7FwHeyBBv8EK=s598-no" style="width:100%;">
         <div class="carousel-caption">
          <h2>GPU catalog</h2>
         </div>
@@ -90,7 +90,7 @@
       </div> 
       <div class="item">
     <a href="CatalogCooler.php">
-        <img src="images/81C5MoQ-JuL._SL1500_" style="width:100%;">
+        <img src="https://lh3.googleusercontent.com/zTCRAlEn-BjzURNZkv7APrj4lEaVvHwfQVilXWwDwlb1KxiBQFuaWBedR4sxqp1TXCK4BzPtilUd7VGgoLuj5P6MXHWqkewCOsdbpGMIeimVD5t3z4lSu3lho2_QxNr1Jezhsnjn78LYaxgUbPhwA7o7IlrH8g-W9B3dswfK38PY-6bwPYrJTRA0tPP0nu3JIGlNY4sfPmOTtoA8jhMYVXpyDuvaciazHRDukDcV8kwvnu4UzF7ftVWd7kcURJtaCj3WtEIEZlM2_OQm96jzDLoQuIdBhIpX0q462caRQYpZxXmgIxjSCoINefHD6xGEGM6jZg12IWS4RHf-SJqUWC4vYyCOyoGW-v5JqCJZBs5ZMixtOP2mUmCHL7wpsWvj027bnqJ_o94o7fcmrbNoBbD4EUmrtBkilcF4NqQSbrV4fOiNhwKoEizEwyWxO6_djG6oRCWuzH3HvyT25lb0c5MOTQHBg1ng9T9NzNGOpNI-8Ue5G7Ah5NyOWKbJJI2PzpeWlF0O1hd9wZNK-d_dTzcULFiIwuYRKO85pNtsXoCwzOpjArPExapecEtsawHnfkBO2JARHzq1j1HSr4RGVaTX1R-RflNJAjQW-h_f5SM9tWsexlbS01e4yDqe_FMNqvMEu5uo-C-MtjuA1Q-EdCC8=w598-h543-no" style="width:100%;">
         <div class="carousel-caption">
          <h2>Cooler catalog</h2>
         </div>
