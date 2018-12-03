@@ -12,7 +12,7 @@
 	$value = $_COOKIE[$cookie_name];
     $newValue = $value . ',' . $var_value;
 	setcookie($cookie_name, $newValue, time() + (200));
-	//header('Location: product.php?varname={$var_value}');
+	header('Location: product.php?varname={$var_value}');
 	?>
 
 
