@@ -29,7 +29,7 @@
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
-              <li>'Tosat='</li>
+              <li>Tosat=</li>
           </ul>
       </div>
     </nav>
