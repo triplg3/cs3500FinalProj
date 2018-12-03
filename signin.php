@@ -11,7 +11,8 @@
 <body>
 <?php 
 $cookie_name = "CS3500_final_user";
-$delimiter = ",";
+$delimiter = ",";$firstname = $_GET["first_name"];
+	$lastname = $_GET["last_name"];
 if(!isset($_COOKIE[$cookie_name])) {
     echo "You have not been registered yet! Please register using the link below to sign in!";
     echo ("<a href='SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
