@@ -76,6 +76,7 @@ $order = <<<ORDER
 					<div class='panel-body'><img src='{$img}' class='img-responsive' style='width:100%' alt='Image'></div>
 					<div class='panel-footer'>{$name}  
 						<hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
+						<br>
 						<a href="remove.php?varname={$id}"> <div class="col-sm-2"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
 					</div>
 				</div>
