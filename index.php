@@ -68,10 +68,14 @@ for ($i=0; $i < 100; $i++) {
   $stock = rand(0,10);
   $starsArray[$i] = $stars;
   $stockArray[$i] = $stock;
-  echo $starsArray[$i];
+  //echo $starsArray[$i];
 }
 $_SESSION["stars"] = $starsArray;
 $_SESSION["stock"] = $stockArray;
+for ($i=0; $i < 100; $i++) { 
+ echo $starsArray[$_SESSION["stars"]];
+
+}
 
 
 ?>
