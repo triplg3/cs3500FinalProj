@@ -42,11 +42,7 @@ function outputProduct() {
 	$username = "cmbwirfswuomta";
 	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
 	$dbname = "d6gonsmn2ss9v6";
-	$checkout='<a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>';
-	if ($stockcount==0){
-		$checkout='';
-		
-	}
+
 	// Create connection
 	$conn = pg_connect("host=ec2-54-197-249-140.compute-1.amazonaws.com port=5432 dbname=d6gonsmn2ss9v6 user=cmbwirfswuomta password=3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1");
 	// Check connection
@@ -76,11 +72,7 @@ function outputProduct() {
                     <h6><small>Our Price</small></h6>
                     <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
 					<h4>{$startxt}       with {$stockcount} in stock</h4>
-						{$row[4]} <br> 
-
-
-							{$checkout}
-						
+						{$row[4]} <br>   <a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>
 ORDER;
 echo $order;
 		}
