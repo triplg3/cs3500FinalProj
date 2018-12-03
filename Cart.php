@@ -78,7 +78,7 @@ $order = <<<ORDER
 						<div class='container'>
 							{$name}  
 						<hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
-						<hr><a href="remove.php?varname={$id}"> <div class="col-sm-2"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
+						<a href="remove.php?varname={$id}"> <div class="col-sm-3"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
 						</div>
 					</div>
 				</div>
