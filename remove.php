@@ -16,6 +16,11 @@
     $money = (int) $moneyString;
     $finalString = "true";
     $arrlength = count($cookie_array);
+    if($removeID < 10)
+    {
+        $removeID ="0" . $removeID;
+
+    }
     // for($i = 6; $i < $arrlength; $i++){
     // 	if($removeID == $cookie_array[$i]){
     // 		for($j = )
@@ -31,11 +36,10 @@
     		$finalString = $finalString . ',' . $tempArray[$i];
     	}
     	setcookie($cookie_name, $finalString, time() + (200));
-        echo "DID I GET HERE2";
 
     }
     else{
-        echo "DID I GET HERE";
+        
     $finalString = str_replace($removeID . ",", "", $value);
     setcookie($cookie_name, $finalString, time() + (200));
 }
