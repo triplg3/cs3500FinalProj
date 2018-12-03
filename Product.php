@@ -52,6 +52,11 @@ echo $order;
 $conn->close();
 }
 
+$testarray = $_SESSION["stockarray"];
+$testcount= count($testarray);
+for ($i=0; $i < testcount; $i++) { 
+  echo $testcount[$i];
+}
 
 	
 ?>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
 <head>
   <title>Home</title>
@@ -57,5 +58,21 @@
     </div>
   </div>
 </div>
+
+<?php 
+
+
+
+for ($i=0; $i < 100; $i++) { 
+  $stars = rand(0,5);
+  $stock = rand(0,10);
+  $starsArray[$i] = $stars;
+  $stockArray[$i] = $stock;
+}
+$_SESSION["stars"] = $starsArray;
+$_SESSION["stock"] = $stockArray;
+
+
+?>
 </body>
 </html>
