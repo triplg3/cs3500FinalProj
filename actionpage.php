@@ -29,8 +29,8 @@
 	<br>
 	Please click the home button below to browse the store!
 	<br>
-	"
-	header('Location: index.php');
+	";
+	header('Location: Product.php?varname='.$var_value);
 	?>
 
 
