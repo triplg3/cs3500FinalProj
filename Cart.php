@@ -43,7 +43,7 @@
   $value = $_COOKIE[$cookie_name];
     $cookie_array = explode ("," , $value, 1300 );
     $arrlength = count($cookie_array);
-    if($arrlength > 5){
+    if($arrlength > 6){
       if($cookie_array[0] == true){
         //NEEDS CODE TO SHOW WHAT IS IN CART
         $servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
@@ -58,7 +58,7 @@
           echo("Connection failed: We Ded" );
     
   } 
-  for($i = 5; $i < $arrlength; $i++){
+  for($i = 6; $i < $arrlength; $i++){
   $sql = "SELECT * FROM catalog WHERE id =" . $cookie_array[$i];
   $result = pg_query($conn, $sql);
   $row = pg_fetch_row($result);
