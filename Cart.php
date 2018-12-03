@@ -74,10 +74,12 @@ $order = <<<ORDER
 			<div class='col-sm-8'>
 				<div class='panel panel-primary'>
 					<div class='panel-body'><img src='{$img}' class='img-responsive' style='width:100%' alt='Image'></div>
-					<div class='panel-footer'>{$name}  
+					<div class='panel-footer'>
+						<div class='container'>
+						{$name}  
 						<hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
-						<br>
 						<a href="remove.php?varname={$id}"> <div class="col-sm-2"><input type="submit" value="Remove From Cart" class="btn btn-danger btn-block btn-lg"></div></a>
+						</div>
 					</div>
 				</div>
 			</div>	
@@ -87,7 +89,7 @@ ORDER;
 echo $order;
 }
 $order = <<<ORDER
-<div class="col-sm-8"></div><a href="checkout.php"> <div class="col-sm-2"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg"></div></a>
+<div class="col-sm-8"></div><a href="checkout.php"> <div class="col-sm-2"><input type="submit" value="Check Out" class="btn btn-warning btn-block btn-lg"></div></a>
 ORDER;
 echo $order;
 $conn->close();
