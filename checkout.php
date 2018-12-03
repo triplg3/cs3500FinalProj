@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cart</title>
+  <title>Checkout</title>
   <link rel="stylesheet" href="3pages.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -72,7 +72,7 @@
 	echo "You have " . $newmoney . " webcoins remaining.";
 }
 	else {echo "You broke, removing something"}
-
+}}
 ?>
 
 </body>
