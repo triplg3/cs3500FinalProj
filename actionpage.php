@@ -30,7 +30,7 @@
 	Please click the home button below to browse the store!
 	<br>
 	"
-
+	header('Location: index.php');
 	?>
 
 
