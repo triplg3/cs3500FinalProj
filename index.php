@@ -43,11 +43,7 @@
             $money = $cookie_array[5];
 
             
-          echo "<button class='btn btn-dark' disabled>&curren" $money "</button>";
-        }
-        else {
-
-
+          echo "<button class='btn btn-dark' disabled>&curren"  "</button>";
         }
 
         ?>
