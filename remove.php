@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
 <head>
 	<title>YOU SHOULDN'T SEE THIS FOR MORE THAN A SPLIT SECOND</title>

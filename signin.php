@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="3pages.css">
