@@ -84,7 +84,7 @@ $order = <<<ORDER
 ORDER;
 echo $order;
 }
-
+echo <div class="col-sm-8"></div><a href="checkout.php"> <div class="col-sm-2"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg"></div></a>
 $conn->close();
 }
 
@@ -97,7 +97,6 @@ else {
 }
 
   ?>
-<div class="col-sm-8"></div>
-<div class="col-sm-2"><input type="submit" value="Check Out" class="btn btn-success btn-block btn-lg" formaction="checkout.php"></div>
+
 </body>
 </html>
