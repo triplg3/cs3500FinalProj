@@ -34,9 +34,7 @@
 
     }
     else{
-    
-    str_replace($removeID . ",", "", $value);
-    $finalString = $value;
+    $finalString = str_replace($removeID . ",", "", $value);
     setcookie($cookie_name, $finalString, time() + (200));
 }
 
@@ -45,7 +43,7 @@
 
 
 
-header('Location: Cart.php');
+
 	?>
 
 </body>
