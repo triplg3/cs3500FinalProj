@@ -67,23 +67,24 @@
   $price = $row[3];
   $img = $row[6];
   $description = $row[4];
-
-  echo $id;
-  echo " TEST <br>";
-  echo "   
+$order = <<<ORDER
+<br>  
     <div class='col-sm-12'>
       <div class='panel panel-primary'>
-        <div class='panel-body'><img src='{". $Img. "}' class='img-responsive' style='width:100%' alt='Image'></div>
-        <div class='panel-footer'>{" . $name . "}  
-      <hr>Price:&curren {" . $price . "}  <a href='Product.php?varname={". $Id. "}'>Visit Store Page</a>    
+        <div class='panel-body'><img src='{$img}' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>{$name}  
+      <hr>Price:&curren {$price}  <a href='Product.php?varname={$id}'>Visit Store Page</a>    
     </div>
       </div>
-    </div>";
+    </div>
+	
+ORDER;
+echo $order;
 }
 
-
-      }
 $conn->close();
+}
+
 }
 else {
   echo "Cart is empty!";
