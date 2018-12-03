@@ -12,11 +12,8 @@
 	$value = $_COOKIE[$cookie_name];
     $newValue = $value . ',' . $var_value;
 	setcookie($cookie_name, $newValue, time() + (200));
+	header('Location: Product.php?varname='.$var_value);
 	?>
-<script>
-	window.onload = function() {
-    window.location.href = "catalog.php";
-	}
-</script>
+
 </body>
 </html>
