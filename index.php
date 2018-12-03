@@ -29,8 +29,7 @@
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
 		  <ul class="nav navbar-nav navbar-right">
-              <li>Egg</li>
-              <li>Name</a></li>
+              <li>'Tosat='</li>
           </ul>
       </div>
     </nav>
@@ -43,7 +42,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="item active">
-        <a href="Item One">
+        <a href="CatalogCPU.php">
 		<img src="https://i.imgur.com/ZYho29R.png" style="width:100%;">
         <div class="carousel-caption">
           <h2>Intel Core i9</h2>
@@ -51,7 +50,7 @@
 		</a>
       </div>    
 	  <div class="item">
-	  <a href="Item Two">
+	  <a href="CatalogMB.php">
         <img src="https://i.imgur.com/dZZyi7l.png" style="width:100%;">
         <div class="carousel-caption">
          <h2>MSI Z390</h2>
