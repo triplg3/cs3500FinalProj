@@ -12,7 +12,32 @@
 <?php
 $var_value = 0;
 function outputProduct() {
+	$startxt='<i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>';
+	$starval = 0;
+	
+	$stararray = $_SESSION["stars"];
+	$stockarray = $_SESSION["stock"];	
 	$var_value = $_GET['varname'];
+	$starval = $stararray[$var_value-10];
+	$stockcount = $stockarray[$var_value-10];
+	if($starval==1){
+		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>';
+	}
+	if($starval==2){
+		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>';
+
+	}
+	if($starval==3){
+		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>';
+
+	}
+	if($starval==4){
+		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star"></i>';
+
+	}
+	if($starval==5){
+		$startxt='<i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i>';
+	}
 	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
 	$username = "cmbwirfswuomta";
 	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
@@ -46,17 +71,11 @@ function outputProduct() {
 
                     <h6><small>Our Price</small></h6>
                     <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
+					<h4>{$startxt} %20%20%20 with {$stockcount} in stock</h4>
 						{$row[4]} <br>   <a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>
 ORDER;
 echo $order;
 		}
-$stockarray = $_SESSION["stock"];
-$stockcount= count($stockarray);
-$stararray = $_SESSION["stars"];
-$starcount = count($stararray);
-for ($i=0; $i < $testcount; $i++) { 
-  echo $testarray[$i];
-}
 $conn->close();
 }
 
