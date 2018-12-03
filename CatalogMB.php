@@ -94,7 +94,7 @@ $conn->close();
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://i.imgur.com/ZYho29R.png">Parts Store</a>
+          <a class="navbar-brand" href="#">Parts Store</a>
         </div>
           <ul class="nav navbar-nav">
             <li><a href="index.php">Home <span class="glyphicon glyphicon-home"></span></a></li>
