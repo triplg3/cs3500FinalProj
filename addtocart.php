@@ -13,10 +13,10 @@
     $newValue = $value . ',' . $var_value;
 	setcookie($cookie_name, $newValue, time() + (200));
 	?>
-
+<script>
 	window.onload = function() {
     window.location.href = "catalog.php";
 	}
-
+</script>
 </body>
 </html>
