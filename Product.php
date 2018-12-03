@@ -53,8 +53,8 @@ echo $order;
     echo "DID I GET HERE";
 $testarray = $_SESSION["stock"];
 $testcount= count($testarray);
-for ($i=0; $i < testcount; $i++) { 
-  echo $testcount[$i];
+for ($i=0; $i < $testcount; $i++) { 
+  echo $testarray[$i];
 }
 $conn->close();
 }
