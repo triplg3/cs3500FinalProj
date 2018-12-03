@@ -93,6 +93,9 @@
 	echo "<h2>You spent " . $total . " webcoins</h2>";
 	$newmoney = $money - $total;
 	echo "<h2>You have " . $newmoney . " webcoins remaining</h2>";
+	$newmoneystring = (string) $newmoney;
+	$cookie_value = $cookie_array[0] . ','.$cookie_array[1] . ','.$cookie_array[2] . ','.$cookie_array[3] . ','.$cookie_array[4] . ','.$newmoneystring;
+	setcookie($cookie_name, $cookie_value, time() + (200));
 }
 	else {echo "<h2> You do not have enough money! Sorry!</h2>";
 		echo ("<a href='Cart.php' class='btn btn-success btn-block btn-lg'>Cart</a>");
