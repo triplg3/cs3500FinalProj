@@ -71,7 +71,7 @@ function outputProduct() {
 
                     <h6><small>Our Price</small></h6>
                     <h3 style="margin-top:0px;"> &curren {$row[3]}</h3> 
-					<h4>{$startxt} %20%20%20 with {$stockcount} in stock</h4>
+					<h4>{$startxt}       with {$stockcount} in stock</h4>
 						{$row[4]} <br>   <a href="addtocart.php?varname={$var_value}">	 <div class="col-sm-6"><input type="submit" value="Add to Cart" class="btn btn-warning btn-block btn-lg" formaction="addtocart.php?varname={$var_value}"></div></a>
 ORDER;
 echo $order;
