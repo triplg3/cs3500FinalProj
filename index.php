@@ -33,19 +33,15 @@
           </ul>
 		  <div class="navbar-form navbar-right">
             <?php 
-             $cookie_name = "CS3500_final_user";
-            if(isset($_COOKIE[$cookie_name])) {
-           
+            $cookie_name = "CS3500_final_user";
             $delimiter = ",";
             $value = $_COOKIE[$cookie_name];
             $cookie_array = explode ("," , $value, 1300 );
             $arrlength = count($cookie_array);
-            $money = $cookie_array[5];
 
-            
-          echo "<button class='btn btn-dark' disabled>&curren"  "</button>";
+            if(isset($_COOKIE[$cookie_name])) {
+          echo "<button class='btn btn-dark' disabled>&curren" $cookie_array[5] "</button>";
         }
-
         ?>
           </div>
       </div>
