@@ -12,10 +12,11 @@
 	$value = $_COOKIE[$cookie_name];
     $newValue = $value . ',' . $var_value;
 	setcookie($cookie_name, $newValue, time() + (200));
-	header('Location: https://thisisatestonhowtohostahost.herokuapp.com/product.php?varname='.$var_value);
 	?>
 
-
+	window.onload = function() {
+    window.location.href = "catalog.php";
+	}
 
 </body>
 </html>
