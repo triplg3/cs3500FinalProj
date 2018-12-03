@@ -31,21 +31,6 @@
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
-		  <div class="navbar-form navbar-right">
-            <?php 
-            $cookie_name = "CS3500_final_user";
-            $delimiter = ",";
-            $value = $_COOKIE[$cookie_name];
-            $cookie_array = explode ("," , $value, 1300 );
-            $arrlength = count($cookie_array);
-
-            if(isset($_COOKIE[$cookie_name])) {
-          echo "<button class='btn btn-dark' disabled>&curren" $cookie_array[5] "</button>";
-        }
-        ?>
-          </div>
-      </div>
-    </nav>
 	<br><br>
 <div class="container">
   <div id="picSlide" class="carousel slide" data-ride="carousel">
