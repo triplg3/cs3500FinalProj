@@ -46,7 +46,7 @@
           echo "<button class='btn btn-dark' disabled>&curren" . $money . "</button>";
         }
         else {
-          echo "Please sign in!";
+
 
         }
 
