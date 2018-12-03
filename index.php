@@ -31,6 +31,8 @@
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
+      </div>
+    </nav>
 	<br><br>
 <div class="container">
   <div id="picSlide" class="carousel slide" data-ride="carousel">
