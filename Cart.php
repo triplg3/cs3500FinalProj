@@ -97,6 +97,7 @@ else {
 }
 
   ?>
-
+<div class="col-sm-8"></div>
+<div class="col-sm-2"><input type="submit" value="Check Out" class="btn btn-success btn-block btn-lg" formaction="checkout.php"></div>
 </body>
 </html>
