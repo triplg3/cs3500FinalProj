@@ -37,7 +37,7 @@
   $delimiter = ",";
   if(!isset($_COOKIE[$cookie_name])) {
     echo "You have not been registered yet! Please register using the link below to sign in!";
-    echo ("<a href='http://localhost/cs3500FinalProj/SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
+    echo ("<a href='SignUp.html' class='btn btn-success btn-block btn-lg'>Sign up!</a>");
 }
   else {
   $value = $_COOKIE[$cookie_name];
