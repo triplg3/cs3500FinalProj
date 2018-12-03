@@ -27,7 +27,7 @@
     		$tempArray[$i] = $cookie_array[$i];
     	}
     	$temparraylength = count($tempArray);
-    	for ($i=1; $i < $temparraylength; i++){
+    	for ($i=1; $i < $temparraylength; $i++){
     		$finalString = $finalString . ',' . $tempArray[$i];
     	}
     	setcookie($cookie_name, $finalString, time() + (200));
