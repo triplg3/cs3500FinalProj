@@ -8,9 +8,8 @@
 </head>
 <body>
 <?php	
-// Function to draw each store item on to the page
 function outputALL() {
-	// SQL Calls
+	
 	$servername = "ec2-54-197-249-140.compute-1.amazonaws.com";
 	$username = "cmbwirfswuomta";
 	$password = "3f34561b8edb946546b2555d59c86a153fd4a84498684a7c1660b0020d383ea1";
@@ -28,13 +27,12 @@ function outputALL() {
 	$result = pg_query($conn, "SELECT * FROM catalog");
 
 
-
+		// output data of each row
 		$count=0;
 		$Id = array("","","","");
 		$Name = array("","","","");
 		$Price = array("","","","");
 		$Img = array("","","","");
-		//Outputs Formatted Rows of four
 		while ($row = pg_fetch_row($result)) {
 			$Id[$count] = $row[0];
 			$Name[$count] =  $row[1];
@@ -43,7 +41,7 @@ function outputALL() {
 			$count+=1;
 			if($count==4){
 				$count = 0;
-			// Formatting Function
+			
         	$order = <<<ORDER
 <div class="row">		
     <div class="col-sm-3">

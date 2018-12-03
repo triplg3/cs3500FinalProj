@@ -3,12 +3,12 @@
 <html>
 <head>
   <title>Home</title>
+  <link rel="stylesheet" href="3pages.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -25,15 +25,10 @@
 					<li><a href="CatalogMB.php">MotherBoards</a></li>
 				</ul>
 				
-				
-				
 			</li>
             <li><a href="SignUp.html">Sign-Up <span class="glyphicon glyphicon-pencil"></span></a></li>
 			<li><a href="Cart.php">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           </ul>
-		  <div class="navbar-form navbar-right">
-            <button class="btn btn-dark" disabled> <!--                                                               PUT VALUE HERE                                    --></button>
-          </div>
       </div>
     </nav>
 	<br><br>
