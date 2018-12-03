@@ -40,7 +40,8 @@
     }
     else{
         
-    $finalString = str_replace($removeID . ",", "", $value);
+    $value = str_replace($removeID . ",", "", $value);
+    $finalString = $value;
     setcookie($cookie_name, $finalString, time() + (200));
 }
 
