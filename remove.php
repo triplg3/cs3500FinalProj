@@ -8,10 +8,7 @@
 
 	<?php 
 	
-    if($removeID < 10)
-    {
-        $removeID = "0" . $_GET['varname'];
-    }
+        $removeID = $_GET['varname'];
 	$cookie_name = "CS3500_final_user";
   $delimiter = ",";
   $value = $_COOKIE[$cookie_name];
