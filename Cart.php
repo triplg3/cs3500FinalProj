@@ -69,7 +69,9 @@
   $description = $row[4];
 $order = <<<ORDER
 <br>  
-    <div class='col-sm-12'>
+	<div class="row">
+	<div class='col-sm-2'></div>
+    <div class='col-sm-8'>
       <div class='panel panel-primary'>
         <div class='panel-body'><img src='{$img}' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>{$name}  
