@@ -11,7 +11,6 @@
 </head>
 <body>
 <?php 
-//checks if the cookie is set to true, checks email and password. Ignores input if user is already logged in, just tells them they are good to go!
 $cookie_name = "CS3500_final_user";
 $delimiter = ",";$firstname = $_GET["first_name"];
 	$lastname = $_GET["last_name"];
