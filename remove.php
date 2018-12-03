@@ -33,7 +33,7 @@
     	for ($i=1; $i < $temparraylength; $i++){
     		$finalString = $finalString . ',' . $tempArray[$i];
     	}
-    	setcookie($cookie_name, $finalString, time() + (200));
+    	setcookie($cookie_name, $finalString, time() + (86400 * 30));
 
     }
     else{
