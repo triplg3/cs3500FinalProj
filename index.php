@@ -12,7 +12,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://i.imgur.com/ZYho29R.png">Parts Store</a>
+          <a class="navbar-brand" href="#">Parts Store</a>
         </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Home <span class="glyphicon glyphicon-home"></span></a></li>
@@ -60,13 +60,15 @@
     <ol class="carousel-indicators">
       <li data-target="#picSlide" data-slide-to="0" class="active"></li>
       <li data-target="#picSlide" data-slide-to="1"></li>
+      <li data-target="#picSlide" data-slide-to="2"></li>
+      <li data-target="#picSlide" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
       <div class="item active">
         <a href="CatalogCPU.php">
 		<img src="https://i.imgur.com/ZYho29R.png" style="width:100%;">
         <div class="carousel-caption">
-          <h2>Intel Core i9</h2>
+          <h2>CPU catalog</h2>
         </div>
 		</a>
       </div>    
@@ -74,9 +76,25 @@
 	  <a href="CatalogMB.php">
         <img src="https://i.imgur.com/dZZyi7l.png" style="width:100%;">
         <div class="carousel-caption">
-         <h2>MSI Z390</h2>
+         <h2>Motherboard catalog</h2>
         </div>
 		</a>
+      </div> 
+      <div class="item">
+    <a href="CatalogGC.php">
+        <img src="images/51Avu5iodlL" style="width:100%;">
+        <div class="carousel-caption">
+         <h2>GPU catalog</h2>
+        </div>
+    </a>
+      </div> 
+      <div class="item">
+    <a href="CatalogCooler.php">
+        <img src="images/81C5MoQ-JuL._SL1500_" style="width:100%;">
+        <div class="carousel-caption">
+         <h2>Cooler catalog</h2>
+        </div>
+    </a>
       </div> 
     </div>
   </div>
