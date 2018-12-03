@@ -70,7 +70,7 @@
 
   echo $id;
   echo " TEST <br>";
-  echo "<div class='row'>   
+  echo "   
     <div class='col-sm-12'>
       <div class='panel panel-primary'>
         <div class='panel-body'><img src='{". $Img. "}' class='img-responsive' style='width:100%' alt='Image'></div>

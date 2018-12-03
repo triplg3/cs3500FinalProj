@@ -41,11 +41,13 @@ if(!isset($_COOKIE[$cookie_name])) {
 }
     }
   }
-  echo "Welcome, " . $firstname . "! You are now registered!
+  echo "Welcome, " . $firstname . "! You are now signed in!
 	<br>
 	Please click the home button below to browse the store!
 	<br>
+
 	"
+	echo ("<a href='index.php' class='btn btn-success btn-block btn-lg'>Home!</a>");
  
 
 ?>
