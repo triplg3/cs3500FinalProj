@@ -59,7 +59,7 @@
     
   } 
   for($i = 5; $i < $arrlength; $i++){
-  $sql = "SELECT * FROM catalog WHERE id == " . $cookie_array[$i];
+  $sql = "SELECT * FROM catalog WHERE id " . $cookie_array[$i];
   $result = pg_query($conn, $sql);
   $row = pg_fetch_row($result);
   $id = $row[0];
