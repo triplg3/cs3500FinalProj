@@ -71,7 +71,7 @@
 	$newmoney = $money - $total;
 	echo "You have " . $newmoney . " webcoins remaining.";
 }
-	else {echo "You broke, removing something"}
+	else {echo "You broke, removing something";}
 }}
 ?>
 
